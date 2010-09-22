@@ -1,0 +1,28 @@
+<configuration>
+  <EPUB>
+    <METADATA>
+      <add key="title" value="true"/>
+      <add key="language" value="false"/>
+      <add key="identifier" value="false"/>
+      <add key="creator" value="true"/>
+      <add key="contributor" value="true"/>
+      <add key="subject" value="true"/>
+      <add key="publisher" value="true"/>
+    </METADATA>
+  </EPUB>
+  <MP3>
+    <METADATA>
+      <add key="Album" value="true"/>
+      <add key="AlbumArtists" value="true"/>
+      <add key="Artists" value="true"/>
+      <add key="Comment" value="true"/>
+      <add key="Composers" value="true"/>
+      <add key="Conductor" value="true"/>
+      <add key="Copyright" value="false"/>
+      <add key="Genres" value="true"/>
+      <add key="Grouping" value="true"/>
+      <add key="Performers" value="true"/>
+      <add key="Title" value="true"/>
+    </METADATA>
+  </MP3>
+</configuration>
