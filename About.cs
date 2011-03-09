@@ -117,27 +117,56 @@ namespace KTransliter
 
         private void btnDonate_Click(object sender, EventArgs e)
         {
+            string _Amount="";
 
-            string _url = "https://www.paypal.com/cgi-bin/webscr?";
-            _url += "cmd=_donations&business=eugef66@gmail.com";
-            _url += "&lc=US";
-            _url += "&amount=" + cmbAmount.SelectedItem.ToString().Replace("$", "") + ".00";
-            _url += "&currency_code=USD";
-            _url += "&no_note=0";
-            _url += "&item_name=KTransliter Development and Support";
-            _url += "&cn=Thank you for your donnation";
-            _url += "&no_shipping=1";
-            _url += "&currency_code=USD";
-            _url += "&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted";
+            if (cmbAmount.SelectedItem.ToString() == "Other")
+            {
 
-            System.Diagnostics.Process.Start(_url);
+                frmInputAmount _inputAmount = new frmInputAmount();
+                _inputAmount.ShowDialog(this);
+                _Amount = _inputAmount.Amount;
+             //_Amount = 
+            }
+            else
+            {
+                _Amount = cmbAmount.SelectedItem.ToString();
+            }
 
-            MessageBox.Show("Thank you for your donation!!!!", "Thank you for your donation!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            decimal _amount;
+
+            if (Decimal.TryParse(_Amount, out _amount) && _amount>0)
+            {
+
+                string _url = "https://www.paypal.com/cgi-bin/webscr?";
+                _url += "cmd=_donations&business=eugef66@gmail.com";
+                _url += "&lc=US";
+                _url += "&amount=" + _Amount.Replace("$", "") + ".00";
+                _url += "&currency_code=USD";
+                _url += "&no_note=0";
+                _url += "&item_name=KTransliter Development and Support";
+                _url += "&cn=Thank you for your donnation";
+                _url += "&no_shipping=1";
+                _url += "&currency_code=USD";
+                _url += "&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted";
+
+                System.Diagnostics.Process.Start(_url);
+
+                MessageBox.Show("Thank you for your donation!!!!", "Thank you for your donation!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (_amount > 0)
+            {
+                this.Close();
+            }
+
 
         }
 
         private void cmbAmount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

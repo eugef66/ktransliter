@@ -38,19 +38,19 @@
   <ItemGroup>
     <Reference Include="Ionic.Zip.Partial, Version=1.9.1.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CyrEngRenamer\CyrEngRenamer\bin\Release\Ionic.Zip.Partial.dll</HintPath>
+      <HintPath>DLLs\Ionic.Zip.Partial.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zlib, Version=1.9.1.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CyrEngRenamer\CyrEngRenamer\bin\Release\Ionic.Zlib.dll</HintPath>
+      <HintPath>DLLs\Ionic.Zlib.dll</HintPath>
     </Reference>
     <Reference Include="logfig, Version=1.0.1.19805, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\logfig\logfig.dll</HintPath>
+      <HintPath>DLLs\logfig.dll</HintPath>
     </Reference>
     <Reference Include="MSTranslitTools, Version=6.0.0.0, Culture=neutral, PublicKeyToken=66f9a1cf678daf62">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CyrEngRenamer\CyrEngRenamer\bin\Release\MSTranslitTools.DLL</HintPath>
+      <HintPath>DLLs\MSTranslitTools.DLL</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="taglib-sharp, Version=2.0.3.2, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\taglib-sharp-2.0.3.2-windows\taglib-sharp-2.0.3.2-windows\Libraries\taglib-sharp.dll</HintPath>
+      <HintPath>DLLs\taglib-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +84,12 @@
     <Compile Include="frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputAmount.Designer.cs">
+      <DependentUpon>InputAmount.cs</DependentUpon>
+    </Compile>
     <Compile Include="MP3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputAmount.resx">
+      <DependentUpon>InputAmount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
