@@ -15,7 +15,7 @@
 
 6. Any functionality/improvements  suggestions are welcome.
 
-7. Friendly donations for “hard work”  in the form of lunch, cognac  or 1 million
+7. Friendly donations for “hard work”  in the form of lunch, drink  or 1 million
 dollars  are appreciated (other variations will be considered as well).
 
 8. Free to use and distribute (see item # 7 above).
