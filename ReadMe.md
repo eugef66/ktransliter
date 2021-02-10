@@ -1,4 +1,5 @@
-﻿Command line arguments: 
+Command line arguments: 
+
 
 Syntax: ktanc2e.exe -<switch>
 
